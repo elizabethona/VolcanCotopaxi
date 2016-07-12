@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registro Donaciones</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../public/stylesheets/reset.css" type="text/css" media="all">
+  <link rel="stylesheet" href="../public/stylesheets/style.css" type="text/css" media="all">
+  <script type="text/javascript" src="../public/javascripts/jquery-1.4.2.min.js" ></script>
+  <script type="text/javascript" src="../public/javascripts/cufon-yui.js"></script>
+  <script type="text/javascript" src="../public/javascripts/Humanst521_BT_400.font.js"></script>
+  <script type="text/javascript" src="../public/javascripts/Humanst521_Lt_BT_400.font.js"></script>
+  <script type="text/javascript" src="../public/javascripts/cufon-replace.js"></script>
+	<script type="text/javascript" src="../public/javascripts/roundabout.js"></script>
+  <script type="text/javascript" src="../public/javascripts/roundabout_shapes.js"></script>
+  <script type="text/javascript" src="../public/javascripts/gallery_init.js"></script>
+  <!--[if lt IE 7]>
+  	<link rel="stylesheet" href="css/ie/ie6.css" type="text/css" media="all">
+  <![endif]-->
+  <!--[if lt IE 9]>
+  	<script type="text/javascript" src="js/html5.js"></script>
+    <script type="text/javascript" src="js/IE9.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <div class="container">
+    	<h1><a href="@{Application.index()}">Volcan Cotopaxi</a></h1>
+      <nav>
+        <ul>
+        	<li><a href="@{Application.index()}">Inicio</a></li>
+          <li><a href="@{Estaticas.vision()}">Usuarios</a></li>
+          <li><a href="@{Estaticas.vivienda()}">Vivienda</a></li>
+          <li><a href="@{Estaticas.donaciones()}" class="current">Donacion</a></li>
+          <li><a href="sitemap.html">Albergues</a></li>
+        </ul>
+      </nav>
+    </div>
+	</header>
+  <!-- #gallery -->
+  <section id="gallery">
+  	<div class="container">
+    	<ul id="myRoundabout">
+      	<li><img src="../public/images/b.jpg" alt=""></li>
+        <li><img src="../public/images/c.jpg" alt=""></li>
+        <li><img src="../public/images/d.jpg" alt=""></li>
+        <li><img src="../public/images/e.jpg" alt=""></li>
+        <li><img src="../public/images/f.jpg" alt=""></li>
+      </ul>
+  	</div>
+  </section>
+  <!-- /#gallery -->
+  <div class="main-box">
+    <div class="container">
+      <div class="inside">
+        <div class="wrapper">
+                 
+          <!-- content -->
+          <section id="content" align="center">
+            <article align="center">
+            	<h2>Registro de <span>Donaciones</span></h2>
+              <form id="contacts-form" action="@{Estaticas.guardar1()}" method="post">
+                <fieldset>
+                 <div class="field">
+                    <label>Nombre:</label>
+                    <input type="text" name="producto" required/>
+                  </div>
+                  <div class="field">
+                    <label>Cantidad:</label>
+                    <input type="text" name="cantidad" required/>
+                  </div>
+                  <div><a href="#" onclick="document.getElementById('contacts-form').submit()">Enviar Informacion!</a></div>
+                </fieldset>
+              </form>
+            </article> 
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer>
+    <div class="container">
+    	<div class="wrapper">
+        <div class="fleft">Copyright - Volcan Cotopaxi</div>
+ 		<div class="fright"><a rel="nofollow" href="http://www.utc.edu.ec/" target="_blank">Universidad Tecnica de Cotopaxi</a> Alma Mater&nbsp; &nbsp; |&nbsp; &nbsp; Ing Informatica y Sistemas--Desarrollo Web</div>      </div>
+    </div>
+  </footer>
+  <script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>
